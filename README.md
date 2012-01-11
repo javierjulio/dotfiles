@@ -8,8 +8,8 @@ and add as I learn more.
 * `cd ~/.dotfiles`
 * `git clone git://github.com/javierjulio/dotfiles.git`
 * `rake install`
-** Will link all files to home directory. For any files that require input, it will prompt (e.g. gitconfig).
-** To update system with changes re-run `rake install` and it will check for identical files and prompt if a replace will occur. The replace action preserves existing file in `file.orig`.
+  * Will link all files to home directory. For any files that require input, it will prompt (e.g. gitconfig).
+  * To update system with future changes just re-run `rake install` and it will check for identical files and prompt if a replace will occur. The replace action preserves existing file in `file.orig`.
 * Create a `~/.localrc` file for settings specific to a system (bashrc will automatically source if file exists).
 
 # Resources
