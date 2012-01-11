@@ -4,10 +4,13 @@ and add as I learn more.
 
 # Installation
 
-* Clone by running `git clone git://github.com/javierjulio/dotfiles.git ~/.dotfiles`
-* Run `rake install` to link to home directory. For any files that require input, it will prompt (e.g. gitconfig)
-* Running `rake install` again will check for identical files and prompt if a replace will occur. Replace preserves existing file in `file.orig`
-* Create a `~/.localrc` file for settings specific to a system
+* `mkdir ~/.dotfiles`
+* `cd ~/.dotfiles`
+* `git clone git://github.com/javierjulio/dotfiles.git`
+* `rake install`
+** Will link all files to home directory. For any files that require input, it will prompt (e.g. gitconfig).
+** To update system with changes re-run `rake install` and it will check for identical files and prompt if a replace will occur. The replace action preserves existing file in `file.orig`.
+* Create a `~/.localrc` file for settings specific to a system (bashrc will automatically source if file exists).
 
 # Resources
 
