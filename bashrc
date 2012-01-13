@@ -1,12 +1,7 @@
-# git auto complete on tab
-source /usr/local/git/contrib/completion/git-completion.bash
+# ========================================
+# Shell preferences
+# ========================================
 
-# add home bin dir if it exists
-if [ -d ~/.bin ]; then
-	export PATH=$HOME/.bin:$PATH
-fi
-
-# preferred editor
 export EDITOR=pico
 
 # customize Terminal prompt
@@ -15,7 +10,41 @@ export EDITOR=pico
 # http://sos.blog-city.com/mac_os_x__bash_customize_your_terminal_prompt_a_little_color.htm
 export PS1="\h:\W "
 
-# use .localrc if found for settings specific to one system
-if [ -f ~/.localrc ]; then
-  source ~/.localrc
+
+# ========================================
+# Path settings
+# ========================================
+
+# add home bin dir if it exists
+if [ -d ~/.bin ]; then
+  export PATH=$HOME/.bin:$PATH
+fi
+
+# rbenv
+if [ -d ~/.rbenv ]; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+fi
+
+# node
+if [ -d ~/.rbenv ]; then
+  export PATH="$HOME/.node/bin:$PATH"
+fi
+
+
+# ========================================
+# Completions
+# ========================================
+
+# git auto complete on tab
+source /usr/local/git/contrib/completion/git-completion.bash
+
+
+# ========================================
+# Per-machine extras
+# ========================================
+
+# system specific settings
+if [ -f ~/.bash_local ]; then
+  source ~/.bash_local
 fi
