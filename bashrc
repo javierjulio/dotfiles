@@ -27,7 +27,7 @@ if [ -d ~/.rbenv ]; then
 fi
 
 # node
-if [ -d ~/.rbenv ]; then
+if [ -d ~/.node ]; then
   export PATH="$HOME/.node/bin:$PATH"
 fi
 
