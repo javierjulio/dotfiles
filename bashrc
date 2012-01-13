@@ -1,6 +1,10 @@
 # git auto complete on tab
 source /usr/local/git/contrib/completion/git-completion.bash
 
+# add .bin to path
+export PATH="$HOME/.bin:$PATH
+
+# preferred editor
 export EDITOR=pico
 
 # customize Terminal prompt
