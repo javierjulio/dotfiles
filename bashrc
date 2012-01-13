@@ -1,8 +1,10 @@
 # git auto complete on tab
 source /usr/local/git/contrib/completion/git-completion.bash
 
-# add .bin to path
-export PATH="$HOME/.bin:$PATH
+# add home bin dir if it exists
+if [ -d ~/.bin ]; then
+	export PATH=$HOME/.bin:$PATH
+fi
 
 # preferred editor
 export EDITOR=pico
