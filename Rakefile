@@ -7,11 +7,14 @@ desc "Install dotfiles to home directory using symlinks"
 task :install do
   replace_all = false
   home = File.expand_path(ENV['HOME'])
+  ignored = %w(Rakefile README.md)
   
   Dir['*'].each do |file|
-    next if %w(Rakefile README.md).include?(file)
+    next if ignored.include?(file)
+    
     filename = file.sub('.erb', '')
     target = File.expand_path(File.join(home, ".#{filename}"))
+    
     if File.exist?(target) or File.symlink?(target) or File.directory?(target)
       if File.identical?(file, target)
         puts "Identical #{filename}"
