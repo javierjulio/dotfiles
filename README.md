@@ -1,6 +1,4 @@
-These are my configuration scripts for bash, git, ruby, irb, etc. I've only 
-become more comfortable with CLI tools so I'm using this project to organize 
-and add as I learn more.
+These are my dot files and configuration scripts for bash, git, ruby, irb, etc.
 
 # Installation
 
@@ -10,7 +8,7 @@ and add as I learn more.
 * `rake install`
   * Will link all files to home directory. For any files that require input, it will prompt (e.g. gitconfig).
   * To update system with future changes just re-run `rake install` and it will check for identical files and prompt if a replace will occur. The replace action preserves existing file in `file.orig`.
-* Create a `~/.localrc` file for settings specific to a system (bashrc will automatically source if file exists).
+* Create a `~/.bash_local` file for system specific settings (bashrc will automatically source if file exists).
 
 # Resources
 
