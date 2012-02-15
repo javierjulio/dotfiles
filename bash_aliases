@@ -1,9 +1,13 @@
-# Bundler/Rails/Rake
-alias bers='bundle exec rails server'
-alias berc='bundle exec rails console'
+# Bundler
+alias bi='bundle install'
+
+# Rake
 alias ber='bundle exec rake'
 alias bert='bundle exec rake test'
-alias bi='bundle install'
+
+# Rails
+alias berc='bundle exec rails console'
+alias bers='bundle exec rails server'
 
 # QuickLook
 alias ql='qlmanage -p "$@" >& /dev/null'
