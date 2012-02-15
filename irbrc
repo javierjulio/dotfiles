@@ -55,6 +55,11 @@ class Object
   end
 end
 
+# Print database schema for the provided Rails model
+def show_schema(obj)
+  y(obj.send("column_names"))
+end
+
 def r
   reload!
 end
