@@ -9,4 +9,6 @@ alias bi='bundle install'
 alias ql='qlmanage -p "$@" >& /dev/null'
 
 # Shortcuts
+alias docs='cd ~/Documents'
+alias documents='cd ~/Documents'
 alias projects='cd ~/Projects'
