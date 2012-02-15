@@ -13,6 +13,9 @@ alias bers='bundle exec rails server'
 # QuickLook
 alias ql='qlmanage -p "$@" >& /dev/null'
 
+# File Management
+alias rmdir='rm -rf'
+
 # Shortcuts
 alias docs='cd ~/Documents'
 alias documents='cd ~/Documents'
