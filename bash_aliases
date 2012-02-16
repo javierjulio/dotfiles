@@ -4,6 +4,7 @@ alias bi='bundle install'
 
 # Rake
 alias ber='bundle exec rake'
+alias berdm='bundle exec rake db:migrate'
 alias bert='bundle exec rake test'
 
 # Rails
