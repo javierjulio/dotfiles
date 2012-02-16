@@ -8,7 +8,7 @@ alias bert='bundle exec rake test'
 
 # Rails
 alias berc='bundle exec rails console'
-alias berr='bundle exec rails runner $@'
+alias berr='bundle exec rails runner'
 alias bers='bundle exec rails server'
 
 # QuickLook
