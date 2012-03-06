@@ -1,4 +1,5 @@
 alias reload='source ~/.bash_profile'
+alias q='exit'
 
 
 # ========================================
