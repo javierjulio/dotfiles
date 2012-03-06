@@ -1,3 +1,22 @@
+alias reload='source ~/.bash_profile'
+
+
+# ========================================
+# File Management
+# ========================================
+
+alias rmdir='rm -rf'
+
+
+# ========================================
+# Directory Shortcuts
+# ========================================
+
+alias docs='cd ~/Documents'
+alias documents='cd ~/Documents'
+alias projects='cd ~/Projects'
+
+
 # ========================================
 # Bundler
 # ========================================
@@ -52,20 +71,3 @@ alias ql='qlmanage -p "$@" >& /dev/null'
 #   iawriter ~/Documents/Notes.txt
 # 
 alias iawriter='open -b jp.informationarchitects.WriterForMacOSX'
-
-
-# ========================================
-# File Management
-# ========================================
-
-alias rmdir='rm -rf'
-
-
-# ========================================
-# General Shortcuts
-# ========================================
-
-alias docs='cd ~/Documents'
-alias documents='cd ~/Documents'
-alias projects='cd ~/Projects'
-alias reload='source ~/.bash_profile'
