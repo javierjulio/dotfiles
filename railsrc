@@ -1,0 +1,18 @@
+#!/usr/bin/ruby
+# 
+# Resources
+# http://ozmm.org/posts/railsrc.html
+# http://rbjl.net/49-railsrc-rails-console-snippets
+
+# Log to STDOUT if in Rails
+if defined?(Rails) and !Rails.env.nil?
+  if Rails.logger
+    Rails.logger = Logger.new(STDOUT)
+    ActiveRecord::Base.logger = Rails.logger
+  end
+end
+
+# Print database schema for the provided Rails model
+def show_schema(obj)
+  y(obj.send("column_names"))
+end

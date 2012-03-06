@@ -55,11 +55,6 @@ class Object
   end
 end
 
-# Print database schema for the provided Rails model
-def show_schema(obj)
-  y(obj.send("column_names"))
-end
-
 def r
   reload!
 end
@@ -82,10 +77,5 @@ def time(times = 1)
   ret
 end
 
-# Log to STDOUT if in Rails
-if defined?(Rails) and !Rails.env.nil?
-  if Rails.logger
-    Rails.logger = Logger.new(STDOUT)
-    ActiveRecord::Base.logger = Rails.logger
-  end
-end
+# load railsrc
+load File.dirname(__FILE__) + '/.railsrc' if ENV['RAILS_ENV'] || defined? Rails
