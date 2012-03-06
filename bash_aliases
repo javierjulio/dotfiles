@@ -44,6 +44,17 @@ alias ql='qlmanage -p "$@" >& /dev/null'
 
 
 # ========================================
+# Applications
+# ========================================
+
+# Examples
+# 
+#   iawriter ~/Documents/Notes.txt
+# 
+alias iawriter='open -b jp.informationarchitects.WriterForMacOSX'
+
+
+# ========================================
 # File Management
 # ========================================
 
