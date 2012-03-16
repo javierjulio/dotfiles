@@ -59,6 +59,10 @@ def r
   reload!
 end
 
+def q
+  system 'exit'
+end
+
 # Clear the screen
 def clear
   system 'clear'
