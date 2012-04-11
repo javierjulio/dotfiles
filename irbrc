@@ -60,7 +60,7 @@ def r
 end
 
 def q
-  system 'exit'
+  exit
 end
 
 # Clear the screen
