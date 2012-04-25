@@ -31,6 +31,7 @@ alias bi='bundle install'
 alias ber='bundle exec rake'
 alias berdm='bundle exec rake db:migrate'
 alias bert='bundle exec rake test'
+alias fs='foreman start'
 
 
 # ========================================
