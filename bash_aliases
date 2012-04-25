@@ -12,6 +12,7 @@ alias rm="echo 'Use mv instead: mv myfile ~/.Trash'"
 # Neat, you can reference arguments within an alias and its evaluated
 # alias rmm='mv $1 bin'
 
+
 # ========================================
 # Directory Shortcuts
 # ========================================
@@ -22,17 +23,11 @@ alias projects='cd ~/Projects'
 
 
 # ========================================
-# Bundler
+# Ruby
 # ========================================
 
 alias be='bundle exec'
 alias bi='bundle install'
-
-
-# ========================================
-# Rake
-# ========================================
-
 alias ber='bundle exec rake'
 alias berdm='bundle exec rake db:migrate'
 alias bert='bundle exec rake test'
