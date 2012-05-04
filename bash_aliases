@@ -14,9 +14,11 @@ alias rm="echo 'Use mv instead: mv myfile ~/.Trash'"
 
 
 # ========================================
-# Directory Shortcuts
+# Directory Navigation
 # ========================================
 
+alias ..='cd ..'
+alias ~='cd ~'
 alias docs='cd ~/Documents'
 alias documents='cd ~/Documents'
 alias projects='cd ~/Projects'
