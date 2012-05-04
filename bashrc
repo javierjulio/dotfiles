@@ -33,6 +33,14 @@ fi
 
 
 # ========================================
+# Completions
+# ========================================
+
+# git auto complete on tab
+source /usr/local/git/contrib/completion/git-completion.bash
+
+
+# ========================================
 # Aliases
 # ========================================
 
@@ -42,18 +50,9 @@ fi
 
 
 # ========================================
-# Completions
+# System specific settings
 # ========================================
 
-# git auto complete on tab
-source /usr/local/git/contrib/completion/git-completion.bash
-
-
-# ========================================
-# Per-machine extras
-# ========================================
-
-# system specific settings
 if [ -f ~/.bash_local ]; then
   source ~/.bash_local
 fi
