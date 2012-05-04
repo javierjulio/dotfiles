@@ -1,6 +1,9 @@
 alias reload='source ~/.bash_profile'
 alias q='exit'
 
+alias g='git'
+alias h='history'
+
 alias remoteip="curl -s http://checkip.dyndns.com/ | sed 's/[^0-9\.]//g'"
 alias localip="ipconfig getifaddr en1"
 
