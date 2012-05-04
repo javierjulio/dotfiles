@@ -17,3 +17,6 @@ These are my dot files and configuration scripts for bash, git, ruby, irb, etc.
 * https://github.com/rtomayko/dotfiles
 * https://github.com/ryanb/dotfiles
 * https://github.com/minhajuddin/dotfiles
+* https://github.com/mathiasbynens/dotfiles
+* https://github.com/gf3/dotfiles
+* https://github.com/janmoesen/tilde
