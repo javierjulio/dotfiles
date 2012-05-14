@@ -32,6 +32,7 @@ alias rm="echo 'Use mv instead: mv myfile ~/.Trash'"
 
 alias ..='cd ..'
 alias ~='cd ~'
+alias home='cd ~'
 alias docs='cd ~/Documents'
 alias documents='cd ~/Documents'
 alias projects='cd ~/Projects'
