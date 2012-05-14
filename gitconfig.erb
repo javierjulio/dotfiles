@@ -8,6 +8,7 @@
   status = auto
   branch = auto
 [alias]
+  a = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
   f = fetch
   go = checkout -B
   rb = rebase
