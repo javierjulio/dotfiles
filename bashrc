@@ -8,7 +8,7 @@ export EDITOR=pico
 # http://osxdaily.com/2006/12/11/how-to-customize-your-terminal-prompt/
 # http://www.mactricksandtips.com/2008/10/customizing-the-mac-terminal-bash-prompt.html
 # http://sos.blog-city.com/mac_os_x__bash_customize_your_terminal_prompt_a_little_color.htm
-export PS1="\W: "
+export PS1="\[\e[0;36m\]\W:\[\e[0m\] "
 
 
 # ========================================
