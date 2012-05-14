@@ -19,11 +19,8 @@ alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 # Also, clear Apple’s System Logs to improve shell startup speed
 alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
 
-# alias rmdir='rm -rf'
 # http://blogs.adobe.com/cantrell/archives/2012/03/stop-using-rm-on-the-command-line-before-its-too-late.html
-alias rm="echo 'Use mv instead: mv myfile ~/.Trash'"
-# Neat, you can reference arguments within an alias and its evaluated
-# alias rmm='mv $1 bin'
+alias rm="echo 'Use trash instead: trash my-file.txt'"
 
 
 # ========================================
