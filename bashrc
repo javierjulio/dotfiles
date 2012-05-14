@@ -44,9 +44,14 @@ source /usr/local/git/contrib/completion/git-completion.bash
 # Aliases
 # ========================================
 
-if [ -e ~/.bash_aliases ]; then
-  . ~/.bash_aliases
-fi
+source ~/.bash_aliases
+
+
+# ========================================
+# Functions
+# ========================================
+
+source ~/.bash_functions
 
 
 # ========================================
