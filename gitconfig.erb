@@ -9,6 +9,8 @@
   branch = auto
 [alias]
   a = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
+  ci = commit
+  co = checkout
   f = fetch
   go = checkout -B
   rb = rebase
