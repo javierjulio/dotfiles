@@ -3,6 +3,8 @@ alias q='exit'
 
 alias g='git'
 alias gs='git status'
+alias guc='git reset --soft HEAD^' # undo last commit
+
 alias h='history'
 
 alias remoteip="curl -s http://checkip.dyndns.com/ | sed 's/[^0-9\.]//g'"
