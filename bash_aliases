@@ -1,14 +1,14 @@
 alias reload='source ~/.bash_profile'
 alias q='exit'
 
+alias h='history'
+
+alias localip="ipconfig getifaddr en1"
+alias remoteip="curl -s http://checkip.dyndns.com/ | sed 's/[^0-9\.]//g'"
+
 alias g='git'
 alias gs='git status'
 alias guc='git reset --soft HEAD^' # undo last commit
-
-alias h='history'
-
-alias remoteip="curl -s http://checkip.dyndns.com/ | sed 's/[^0-9\.]//g'"
-alias localip="ipconfig getifaddr en1"
 
 
 # ========================================
