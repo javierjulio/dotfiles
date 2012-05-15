@@ -1,6 +1,8 @@
 alias reload='source ~/.bash_profile'
 alias q='exit'
 
+alias a='compgen -a' # lists all defined aliases
+
 alias h='history'
 
 alias localip="ipconfig getifaddr en1"
@@ -10,6 +12,8 @@ alias g='git'
 alias gfo='git fetch origin'
 alias gs='git status'
 alias guc='git reset --soft HEAD^' # undo last commit
+
+alias path='echo -e ${PATH//:/\\n}' # pretty print all paths
 
 
 # ========================================
