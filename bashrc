@@ -38,23 +38,14 @@ source /usr/local/git/contrib/completion/git-completion.bash
 
 
 # ========================================
-# Aliases
+# Bash
 # ========================================
 
 source ~/.bash_aliases
 
-
-# ========================================
-# Functions
-# ========================================
-
 source ~/.bash_functions
 
-
-# ========================================
-# System specific settings
-# ========================================
-
+# System specific settings if defined
 if [ -f ~/.bash_local ]; then
   source ~/.bash_local
 fi
