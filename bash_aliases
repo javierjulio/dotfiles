@@ -7,6 +7,7 @@ alias localip="ipconfig getifaddr en1"
 alias remoteip="curl -s http://checkip.dyndns.com/ | sed 's/[^0-9\.]//g'"
 
 alias g='git'
+alias gfo='git fetch origin'
 alias gs='git status'
 alias guc='git reset --soft HEAD^' # undo last commit
 
