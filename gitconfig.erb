@@ -8,6 +8,7 @@
   status = auto
   branch = auto
 [alias]
+  # Easy access to show list of all aliases in this file.
   a = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
   ci = commit
   co = checkout
