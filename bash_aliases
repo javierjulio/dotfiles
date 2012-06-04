@@ -1,5 +1,6 @@
 alias reload='source ~/.bash_profile'
 alias r='source ~/.bash_profile'
+alias c='clear'
 alias q='exit'
 
 alias a='compgen -a' # lists all defined aliases
