@@ -11,6 +11,7 @@ alias remoteip="curl -s http://checkip.dyndns.com/ | sed 's/[^0-9\.]//g'"
 alias g='git'
 alias gb='git branch'
 alias gfo='git fetch origin'
+alias grc='git rebase --continue'
 alias gs='git status'
 alias guc='git reset --soft HEAD^' # undo last commit
 
