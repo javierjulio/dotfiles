@@ -43,6 +43,7 @@ alias ~='cd ~'
 alias home='cd ~'
 alias docs='cd ~/Documents'
 alias documents='cd ~/Documents'
+alias p='cd ~/Projects'
 alias projects='cd ~/Projects'
 
 
