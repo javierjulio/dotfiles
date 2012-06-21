@@ -44,6 +44,7 @@ alias rm="echo 'Use trash instead: trash my-file.txt'"
 # Directory Navigation
 # ========================================
 
+alias opendir='open -R .'
 alias ..='cd ..'
 alias ~='cd ~'
 alias home='cd ~'
