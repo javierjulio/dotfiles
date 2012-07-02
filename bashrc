@@ -36,6 +36,9 @@ fi
 # git auto complete on tab
 source /usr/local/git/contrib/completion/git-completion.bash
 
+# setup auto complete for git alias "g"
+complete -o bashdefault -o default -o nospace -F _git g 2>/dev/null \ || complete -o default -o nospace -F _git g
+
 
 # ========================================
 # Bash
