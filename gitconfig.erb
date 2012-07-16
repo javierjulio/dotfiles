@@ -8,7 +8,7 @@
   status = auto
   branch = auto
 [alias]
-  # Easy access to show list of all aliases in this file.
+  # Show list of all aliases in this file.
   a = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
   b = branch
   ci = commit
@@ -16,6 +16,8 @@
   f = fetch
   fo = fetch origin
   go = checkout -B
+  p = push
+  pos = push origin staging
   pom = push origin master
   phm = push heroku master
   r = rebase
