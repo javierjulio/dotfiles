@@ -84,6 +84,7 @@ alias bers='bundle exec rails server'
 # ========================================
 
 alias hrc='heroku run rails console'
+alias hrdm='heroku run rake db:migrate'
 
 
 # ========================================
