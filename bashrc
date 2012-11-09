@@ -48,7 +48,8 @@ END='\[\e[0m\]' # reset text to default color
 # export PS1='\e[0:36m\W:\e[m \e[0:33m`git branch 2> /dev/null | grep -e ^* | sed -E s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`\e[m'
 # http://richardhulse.blogspot.com/2008/06/using-git.html
 # http://chakra-linux.org/wiki/index.php/Color_Bash_Prompt
-export PS1="${CYAN}\W:${END}${YELLOW}$(__git_ps1)${END} "
+# http://stackoverflow.com/questions/5379986/why-doesnt-my-bash-prompt-update
+export PS1="${CYAN}\W:${END}${YELLOW}\$(__git_ps1)${END} "
 
 
 # ========================================
