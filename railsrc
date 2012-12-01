@@ -30,6 +30,10 @@ def date_formats
   end
 end
 
+def delayed_job_errors?
+  Delayed::Job.where('failed_at is not null').count
+end
+
 def show_routes(match = nil)
   Rails.application.reload_routes!
   all_routes = Rails.application.routes.routes
