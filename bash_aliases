@@ -40,7 +40,7 @@ alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl"
 
 # http://blogs.adobe.com/cantrell/archives/2012/03/stop-using-rm-on-the-command-line-before-its-too-late.html
-alias rm="echo 'Use trash instead: trash my-file.txt'"
+# alias rm="echo 'Use trash instead: trash my-file.txt'"
 
 
 # ========================================
