@@ -26,7 +26,7 @@ alias gp='git push'
 alias gr='git rebase'
 alias grc='git rebase --continue'
 alias gs='git status'
-alias guc='git reset --soft HEAD^' # undo last commit
+alias guci='git reset --soft HEAD^' # undo last commit
 
 
 # ========================================
