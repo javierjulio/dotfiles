@@ -19,7 +19,8 @@ alias path='echo -e ${PATH//:/\\n}' # pretty print all paths
 
 alias g='git'
 alias gb='git branch'
-alias gc='git checkout'
+alias gci='git commit'
+alias gco='git checkout'
 alias gfo='git fetch origin'
 alias gp='git push'
 alias gr='git rebase'
