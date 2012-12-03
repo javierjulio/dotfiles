@@ -66,19 +66,20 @@ alias bi='bundle install'
 alias ber='bundle exec rake'
 alias berdm='bundle exec rake db:migrate'
 alias bert='bundle exec rake test'
-alias fs='foreman start'
-alias rs='ber log:clear && foreman start'
 alias rt='bundle exec ruby -Itest'
+alias fs='foreman start'
 
 
 # ========================================
 # Rails
 # ========================================
 
+alias rs='ber log:clear && foreman start'
 alias berc='bundle exec rails console'
 alias berct='bundle exec rails console test'
 alias berr='bundle exec rails runner'
 alias bers='bundle exec rails server'
+alias rl='tail -f log/development.log'
 
 
 # ========================================
