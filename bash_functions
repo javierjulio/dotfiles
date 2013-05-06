@@ -1,3 +1,7 @@
+function dict () {
+  open dict:///"$@";
+}
+
 # Source (with minor tweaks): http://www.anthonysmith.me.uk/2008/01/08/moving-files-to-trash-from-the-mac-command-line/
 function trash() {
   local path
