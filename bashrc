@@ -33,6 +33,12 @@ complete -o bashdefault -o default -o nospace -F _git g 2>/dev/null \ || complet
 
 export EDITOR=pico
 
+codapath="/Applications/Coda 2.app"
+
+if [ -d "$codapath" ]; then
+  export EDITOR="$codapath -w"
+fi
+
 CYAN='\[\e[0;36m\]'
 BLUE='\[\e[0;34m\]'
 RED='\[\e[0;31m\]'
