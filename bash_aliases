@@ -63,6 +63,8 @@ alias dotfiles='cd ~/Projects/dotfiles'
 
 alias be='bundle exec'
 alias bi='bundle install'
+alias bu='bundle update'
+alias bo='bundle open' # bundle open GEM_NAME
 alias ber='bundle exec rake'
 alias berdm='bundle exec rake db:migrate'
 alias bert='bundle exec rake test'
