@@ -116,6 +116,8 @@ alias ql='qlmanage -p "$@" >& /dev/null'
 
 # Examples
 # 
+#   coda ~/Documents/Notes.txt
 #   iawriter ~/Documents/Notes.txt
 # 
+alias coda='open -b com.panic.Coda2'
 alias iawriter='open -b jp.informationarchitects.WriterForMacOSX'
