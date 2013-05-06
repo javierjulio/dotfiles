@@ -55,7 +55,7 @@ alias docs='cd ~/Documents'
 alias documents='cd ~/Documents'
 alias p='cd ~/Projects'
 alias projects='cd ~/Projects'
-
+alias dotfiles='cd ~/Projects/dotfiles'
 
 # ========================================
 # Ruby
