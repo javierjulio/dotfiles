@@ -38,7 +38,7 @@ def delayed_job_errors?
   Delayed::Job.where('failed_at is not null').count
 end
 
-def show_routes(match = nil)
+def routes(match = nil)
   Rails.application.reload_routes!
   all_routes = Rails.application.routes.routes
   
@@ -61,7 +61,7 @@ def show_routes(match = nil)
 end
 
 # Print database schema for the provided Rails model
-def show_schema(obj)
+def schema(obj)
   y(obj.send("column_names"))
 end
 
