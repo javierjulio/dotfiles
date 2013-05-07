@@ -30,6 +30,10 @@ def date_formats
   end
 end
 
+def djcount
+  Delayed::Job.count
+end
+
 def delayed_job_errors?
   Delayed::Job.where('failed_at is not null').count
 end
