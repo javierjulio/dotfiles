@@ -3,7 +3,7 @@
 # ========================================
 
 if [ -d ~/.bin ]; then
-  export PATH=$HOME/.bin:$PATH
+  export PATH="$HOME/.bin:$PATH"
 fi
 
 if [ -d ~/.node ]; then
@@ -14,6 +14,9 @@ if [ -d ~/.rbenv ]; then
   export PATH="$HOME/.rbenv/bin:$PATH"
   eval "$(rbenv init -)"
 fi
+
+# recommended by Homebrew (brew doctor)
+export PATH="/usr/local/bin:$PATH"
 
 
 # ========================================
