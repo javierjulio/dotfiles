@@ -42,11 +42,11 @@ fi
 
 export EDITOR=pico
 
-codapath="/Applications/Coda 2.app"
+#codapath="/Applications/Coda 2.app"
 
-if [ -d "$codapath" ]; then
-  export EDITOR="$codapath -w"
-fi
+#if [ -d "$codapath" ]; then
+#  export EDITOR="$codapath -w"
+#fi
 
 CYAN='\[\e[0;36m\]'
 BLUE='\[\e[0;34m\]'
