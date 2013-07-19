@@ -8,27 +8,27 @@ task :install do
   replace_all = false
   home = File.expand_path(ENV['HOME'])
   ignored = %w(Rakefile README.md)
-  
+
   Dir['*'].each do |file|
     next if ignored.include?(file)
-    
+
     filename = file.sub('.erb', '')
     target = File.expand_path(File.join(home, ".#{filename}"))
-    
+
     if File.exist?(target) or File.symlink?(target) or File.directory?(target)
       if File.identical?(file, target)
         puts "Identical #{filename}"
       else
         if replace_all
-          replace(file, target)
+          replace_target(file, target)
         else
           print "Replace existing file #{filename}? [ynaq] "
           case $stdin.gets.chomp
           when 'a'
             replace_all = true
-            replace(file, target)
+            replace_target(file, target)
           when 'y'
-            replace(file, target)
+            replace_target(file, target)
           when 'q'
             puts "Abort"
             exit
@@ -38,12 +38,12 @@ task :install do
         end
       end
     else
-      link(file, target)
+      link_target(file, target)
     end
   end
 end
 
-def link(file, target)
+def link_target(file, target)
   filename = file.sub('.erb', '')
   if file =~ /.erb$/
     puts "Generating #{filename}"
@@ -57,14 +57,18 @@ def link(file, target)
   end
 end
 
-def replace(file, target)
+def backup_target(target)
   backup = "#{target}.orig"
   puts "Backing up #{target} to #{backup}"
   File.rename(target, backup)
-  link(file, target)
+end
+
+def replace_target(file, target)
+  backup_target(target)
+  link_target(file, target)
 end
 
 def prompt_for_value(message)
-    print "Enter #{message}: "
-    return $stdin.gets.chomp
+  print "Enter #{message}: "
+  return $stdin.gets.chomp
 end
