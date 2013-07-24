@@ -79,7 +79,6 @@ alias fs='foreman start'
 alias rs='ber log:clear && foreman start'
 alias berc='bundle exec rails console'
 alias berct='bundle exec rails console test'
-alias berr='bundle exec rails runner'
 alias bers='bundle exec rails server'
 alias rl='tail -f log/development.log'
 
