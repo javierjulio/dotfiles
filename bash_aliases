@@ -88,7 +88,9 @@ alias rl='tail -f log/development.log'
 # ========================================
 
 alias hrc='heroku run rails console'
+alias hrr='heroku run rake'
 alias hrdm='heroku run rake db:migrate'
+alias hp='heroku ps'
 alias hps='heroku ps:scale'
 
 
