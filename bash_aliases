@@ -12,6 +12,7 @@ alias remoteip="curl -s http://checkip.dyndns.com/ | sed 's/[^0-9\.]//g'"
 
 alias path='echo -e ${PATH//:/\\n}' # pretty print all paths
 
+alias eject='/usr/bin/drutil eject'
 
 # ========================================
 # Git
