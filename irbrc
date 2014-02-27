@@ -5,33 +5,29 @@
 # https://github.com/atmos/smeagol/blob/master/cookbooks/ruby/templates/default/dot.irbrc.erb
 # https://github.com/holman/dotfiles/blob/master/ruby/irbrc.symlink
 
-require 'irb/completion' # Tab Completion
-require 'irb/ext/save-history'
-require 'pp' # Pretty Print method
-require 'rubygems' # Make gems available
-
-# Awesome Print gem (gem install awesome_print)
-begin
-  require 'ap'
-rescue LoadError
-  puts "ap is not installed. To enable, run: gem install awesome_print"
-end
-
-# Print information about any HTTP requests being made
-begin
-  require 'net-http-spy'
-rescue LoadError
-  puts "net-http-spy is not installed. To enable, run: gem install net-http-spy"
+%w[
+  rubygems
+  irb/completion
+  irb/ext/save-history
+  pp
+  ap
+  net-http-spy
+].each do |path|
+  begin
+    require path
+  rescue LoadError
+    puts "#{path} is not installed. Run: gem install #{path}"
+  end
 end
 
 # Automatic Indentation
 IRB.conf[:AUTO_INDENT] = true
 
 # Remove the annoying irb(main):001:0 and replace with >>
-IRB.conf[:PROMPT_MODE]  = :SIMPLE
+IRB.conf[:PROMPT_MODE] = :SIMPLE
 
 # Save History between irb sessions
-IRB.conf[:SAVE_HISTORY] = 1000
+IRB.conf[:SAVE_HISTORY] = 10000
 IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb-save-history"
 
 class Object
@@ -205,3 +201,5 @@ end
 
 # load railsrc
 load File.dirname(__FILE__) + '/.railsrc' if ENV['RAILS_ENV'] || defined? Rails
+
+puts "#{RUBY_DESCRIPTION.split(' ')[0..1].join(' ').capitalize}"
