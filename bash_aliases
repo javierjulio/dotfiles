@@ -3,14 +3,14 @@ alias r='source ~/.bash_profile'
 alias c='clear'
 alias q='exit'
 
-alias a='compgen -a' # lists all defined aliases
-
 alias h='history'
 
 alias localip="ipconfig getifaddr en1"
 alias remoteip="curl -s http://checkip.dyndns.com/ | sed 's/[^0-9\.]//g'"
 
-alias path='echo -e ${PATH//:/\\n}' # pretty print all paths
+alias aliases="alias | sed 's/alias //g' | sed 's/=/ = /g'"
+
+alias paths='echo -e ${PATH//:/\\n}' # pretty print all paths
 
 alias eject='/usr/bin/drutil eject'
 
@@ -50,6 +50,7 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo 
 
 alias opendir='open -R .'
 alias ..='cd ..'
+alias ...='cd ../..'
 alias ~='cd ~'
 alias home='cd ~'
 alias docs='cd ~/Documents'
@@ -65,7 +66,8 @@ alias dotfiles='cd ~/Projects/dotfiles'
 alias be='bundle exec'
 alias bi='bundle install'
 alias bu='bundle update'
-alias bo='bundle open' # bundle open GEM_NAME
+alias bo='bundle outdated'
+alias bopen='bundle open' # bundle open GEM_NAME
 alias ber='bundle exec rake'
 alias bert='bundle exec rake test'
 alias rt='bundle exec ruby -Itest'
