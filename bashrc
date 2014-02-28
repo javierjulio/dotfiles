@@ -1,19 +1,15 @@
-# ========================================
-# Bash and Git Completions
-# ========================================
-
-if hash brew &> /dev/null; then
-  # https://github.com/mxcl/homebrew/blob/master/Library/Contributions/brew_bash_completion.sh
-  . $(brew --repository)/Library/Contributions/brew_bash_completion.sh
+# Load bash completion
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+  . `brew --prefix`/etc/bash_completion
 fi
 
+# Load git completion
 if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
   . /usr/local/git/contrib/completion/git-completion.bash
-
-  # setup auto complete for git alias "g"
+  
+  # setup autocomplete for git alias "g"
   -complete -o bashdefault -o default -o nospace -F _git g 2>/dev/null \ || complete -o default -o nospace -F _git g
 fi
-
 
 # ========================================
 # Load and initialize
