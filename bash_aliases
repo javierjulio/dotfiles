@@ -3,6 +3,8 @@ alias r='source ~/.bash_profile'
 alias c='clear'
 alias q='exit'
 
+alias s='start' # figures out how to start project server
+
 alias h='history'
 
 alias localip="ipconfig getifaddr en1"
@@ -13,6 +15,7 @@ alias aliases="alias | sed 's/alias //g' | sed 's/=/ = /g'"
 alias paths='echo -e ${PATH//:/\\n}' # pretty print all paths
 
 alias eject='/usr/bin/drutil eject'
+
 
 # ========================================
 # Git
