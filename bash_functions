@@ -1,18 +1,18 @@
 # Open Dictionary app with word lookup
-function dict () {
+dict() {
   open dict:///"$@"
 }
 
 # Create a new directory and enter it
-function md() {
+md() {
   mkdir -p "$@" && cd "$@"
 }
 
-function search() {
+search() {
   searchin . "$@"
 }
 
-function searchin () {
+searchin () {
   find "$1" -type f -print0 | xargs -0 grep -l "$2"
 }
 
@@ -34,7 +34,7 @@ start() {
     messagea="NPM app detected"
     commanda="npm start"
   else
-    messagea="Could not detect app type, do nothing"
+    messagea="Could not detect app type... Looking for Procile or package.json"
   fi
 
   echo -e "$yellow$messagea$reset"
@@ -44,8 +44,8 @@ start() {
   fi
 }
 
-# Source (with minor tweaks): http://www.anthonysmith.me.uk/2008/01/08/moving-files-to-trash-from-the-mac-command-line/
-function trash() {
+# with edits: http://www.anthonysmith.me.uk/2008/01/08/moving-files-to-trash-from-the-mac-command-line/
+trash() {
   local path
   for path in "$@"; do
     osascript -e "tell application \"Finder\"" -e "delete POSIX file \"${PWD}/$path\"" -e "end tell"
