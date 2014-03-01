@@ -2,13 +2,15 @@ These are my dot files and configuration scripts for bash, git, ruby, irb, etc.
 
 # Installation
 
-* `mkdir ~/.dotfiles`
-* `cd ~/.dotfiles`
-* `git clone git://github.com/javierjulio/dotfiles.git`
+* Run [my laptop script](https://github.com/javierjulio/laptop) which will install dotfiles in `~/Projects/dotfiles` folder.
+
+## Standalone installation
+
+* `git clone https://github.com/javierjulio/dotfiles.git ~/Projects/dotfiles`
 * `rake install`
-  * Will link all files to home directory. For any files that require input, it will prompt (e.g. gitconfig).
-  * To update system with future changes just re-run `rake install` and it will check for identical files and prompt if a replace will occur. The replace action preserves existing file in `file.orig`.
-* Create a `~/.bash_local` file for system specific settings (bashrc will automatically source if file exists).
+  * Links all files to home directory. Any files that require input, it will prompt (e.g. gitconfig).
+  * To update just re-run `rake install` and it will check for identical files and prompt if a replace will occur. The replace action preserves the existing file in `file.orig`.
+* Create a `~/.bash_local` file for system specific settings.
 
 # Resources
 
@@ -20,3 +22,4 @@ These are my dot files and configuration scripts for bash, git, ruby, irb, etc.
 * https://github.com/mathiasbynens/dotfiles
 * https://github.com/gf3/dotfiles
 * https://github.com/janmoesen/tilde
+* https://github.com/krishicks/dotfiles
