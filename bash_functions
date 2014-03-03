@@ -39,6 +39,11 @@ start() {
 
   echo -e "$yellow$messagea$reset"
   if [ -n "$commanda" ]; then
+    if [ -f ./config/boot.rb ]; then
+      echo "Removing logs..."
+      bundle exec rake log:clear
+    fi
+    
     echo -e "$cyan$executinglabel$reset $commanda"
     $commanda
   fi
