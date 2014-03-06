@@ -2,10 +2,6 @@
 # Path settings
 # ========================================
 
-if [ -d ~/.bin ]; then
-  export PATH="$HOME/.bin:$PATH"
-fi
-
 if [ -d ~/.node ]; then
   export PATH="$HOME/.node/bin:$PATH"
 fi
