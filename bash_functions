@@ -8,6 +8,10 @@ md() {
   mkdir -p "$@" && cd "$@"
 }
 
+executable() {
+  chmod +x $@
+}
+
 search() {
   searchin . "$@"
 }
