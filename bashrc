@@ -11,6 +11,11 @@ if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
   -complete -o bashdefault -o default -o nospace -F _git g 2>/dev/null \ || complete -o default -o nospace -F _git g
 fi
 
+# Load grc (Terminal colorizer)
+if [ -f `brew --prefix`/etc/grc.bashrc ]; then
+  . `brew --prefix`/etc/grc.bashrc
+fi
+
 # ========================================
 # Load and initialize
 # ========================================
