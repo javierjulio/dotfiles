@@ -27,8 +27,6 @@ alias gci='git commit'
 alias gco='git checkout'
 alias gfo='git fetch origin'
 alias gp='git push'
-alias gr='git rebase'
-alias grc='git rebase --continue'
 alias gs='git status'
 alias guci='git reset --soft HEAD^' # undo last commit
 
