@@ -20,6 +20,10 @@ fi
 # recommended by Homebrew (brew doctor)
 export PATH="/usr/local/bin:$PATH"
 
+# dotfiles bin
+export PATH="$HOME/.bin:$PATH"
+
+
 # ========================================
 # Shell preferences
 # ========================================
