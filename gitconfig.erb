@@ -13,6 +13,8 @@
   # Show list of all aliases in this file.
   a = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
   b = branch
+  db = branch -D
+  nb = checkout -b
   ci = commit
   co = checkout
   cgl = config --global --list
@@ -28,6 +30,8 @@
   phm = push heroku master
   r = rebase
   rb = rebase
+  ros = rebase origin/staging
+  rom = rebase origin/master
   s = status
   todos = !"git ls-files | xargs match-todos | awk -F: '{ print $1,$2; print $3,$4; print $5}' | grcat conf.todos"
   # Undo the last commit but keep changes intact.
