@@ -15,8 +15,6 @@ alias aliases="alias | sed 's/alias //g' | sed 's/=/ = /g'"
 
 alias paths='echo -e ${PATH//:/\\n}' # pretty print all paths
 
-alias eject='/usr/bin/drutil eject'
-
 
 # ========================================
 # Git
@@ -27,7 +25,6 @@ alias gb='git branch'
 alias gci='git commit'
 alias gco='git checkout'
 alias gfo='git fetch origin'
-alias gp='git push'
 alias gs='git status'
 alias guci='git reset --soft HEAD^' # undo last commit
 
@@ -80,11 +77,9 @@ alias fs='foreman start'
 # Rails
 # ========================================
 
-alias rs='ber log:clear && foreman start'
+alias rs='ber log:clear && s'
 alias berc='bundle exec rails console'
-alias berct='bundle exec rails console test'
-alias bers='bundle exec rails server'
-alias berdm='bundle exec rake db:migrate && echo "Preparing test database..." && bundle exec rake db:test:prepare'
+alias berdm='bundle exec rake db:migrate'
 alias rl='tail -f log/development.log'
 
 
