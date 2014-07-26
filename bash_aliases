@@ -2,10 +2,11 @@ alias reload='source ~/.bash_profile'
 alias r='source ~/.bash_profile'
 alias c='clear'
 alias q='exit'
-
 alias s='start' # figures out how to start project server
 
 alias h='history'
+alias hsearch='history | grep --color=auto'
+alias hstats='history | awk '\''{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a;}'\'' | grep -v "./" | column -c3 -s " " -t | sort -nr | nl |  head -n10'
 
 alias localip="ipconfig getifaddr en1"
 alias remoteip="curl -s http://checkip.dyndns.com/ | sed 's/[^0-9\.]//g'"
