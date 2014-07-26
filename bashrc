@@ -1,12 +1,7 @@
 # Load bash completion
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
-fi
 
-# Load git completion
-if [ -f /usr/local/git/contrib/completion/git-completion.bash ]; then
-  . /usr/local/git/contrib/completion/git-completion.bash
-  
   # setup autocomplete for git alias "g"
   -complete -o bashdefault -o default -o nospace -F _git g 2>/dev/null \ || complete -o default -o nospace -F _git g
 fi
