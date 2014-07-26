@@ -1,3 +1,20 @@
+# e.g. countdown 5 'Importing database'
+countdown() {
+  for (( i=$1; i>0; i--)); do
+    printf "\r$2 in $i seconds. Hit any key to continue."
+    read -s -n 1 -t 1 key
+    if [ $? -eq 0 ]; then
+      echo ''
+      break
+    fi
+  done
+}
+
+pause_and_prompt_to_continue() {
+  read -s -p "Press Enter key to continue..."
+  echo ''
+}
+
 # Open Dictionary app with word lookup
 dict() {
   open dict:///"$@"
