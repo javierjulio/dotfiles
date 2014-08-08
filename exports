@@ -5,8 +5,9 @@
 # for the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-if [ -d ~/.node ]; then
-  export PATH="$HOME/.node/bin:$PATH"
+if [ -d ~/.nvm ]; then
+  source ~/.nvm/nvm.sh
+  [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
 fi
 
 if [ -d ~/.pyenv ]; then
