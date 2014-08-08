@@ -4,10 +4,10 @@ countdown() {
     printf "\r$2 in $i seconds. Hit any key to continue."
     read -s -n 1 -t 1 key
     if [ $? -eq 0 ]; then
-      echo ''
       break
     fi
   done
+  echo ''
 }
 
 pause_and_prompt_to_continue() {
@@ -30,6 +30,11 @@ executable() {
 }
 
 ghwd() {
+  if ! git rev-parse --is-inside-work-tree ; then
+    open "https://github.com/javierjulio"
+    return
+  fi
+  
   # https://github.com/zeke/ghwd
   # Figure out github repo base URL
   base_url=$(git config --get remote.origin.url)
