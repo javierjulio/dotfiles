@@ -6,9 +6,17 @@
 [core]
 	excludesfile = ~/.gitignore
 [color]
-  diff = auto
-  status = auto
+  ui = auto
   branch = auto
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
 [alias]
   # Show list of all aliases in this file.
   a = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
