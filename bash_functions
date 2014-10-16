@@ -10,6 +10,10 @@ countdown() {
   echo ''
 }
 
+clean_xcode() {
+  rm -rf ~/Library/Developer/Xcode/DerivedData/*
+}
+
 pause_and_prompt_to_continue() {
   read -s -p "Press Enter key to continue..."
   echo ''
