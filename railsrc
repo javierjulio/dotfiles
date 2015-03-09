@@ -1,15 +1,12 @@
 #!/usr/bin/ruby
-# 
+#
 # Resources
 # http://ozmm.org/posts/railsrc.html
 # http://rbjl.net/49-railsrc-rails-console-snippets
 
-# Log to STDOUT if in Rails
-if defined?(Rails) and !Rails.env.nil?
-  if Rails.logger
-    Rails.logger = Logger.new(STDOUT)
-    ActiveRecord::Base.logger = Rails.logger
-  end
+if defined?(Rails)
+  ActiveRecord::Base.logger = Logger.new(STDOUT)
+  ActionController::Base.logger = Logger.new(STDOUT)
 end
 
 # Show the date/time format strings defined and example output
@@ -30,41 +27,14 @@ def date_formats
   end
 end
 
-def djcount
-  Delayed::Job.count
-end
-
-def delayed_job_errors?
-  Delayed::Job.where('failed_at is not null').count
-end
-
-def routes(match = nil)
-  Rails.application.reload_routes!
-  all_routes = Rails.application.routes.routes
-  
-  require 'rails/application/route_inspector'
-  inspector = Rails::Application::RouteInspector.new
-  
-  routes = inspector.format(all_routes, ENV['CONTROLLER'])
-  
-  ansi_bold = "\033[1m"
-  ansi_reset = "\033[0m"
-  
-  if (match)
-    match = match.to_s
-    puts routes.grep(/#{match}/).map { |r|
-      r.gsub!(match, "#{ansi_bold}#{match}#{ansi_reset}")
-    }.join("\n")
-  else
-    puts routes.join "\n"
-  end
-end
-
-# Print database schema for the provided Rails model
 def schema(obj)
   y(obj.send("column_names"))
 end
 
 def sql(query)
   ActiveRecord::Base.connection.select_all(query)
+end
+
+def user(email)
+  User.find_by(email: email)
 end
