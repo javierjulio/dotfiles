@@ -1,5 +1,5 @@
 #!/usr/bin/ruby
-# 
+#
 # Resources
 # https://gist.github.com/406963
 # https://github.com/atmos/smeagol/blob/master/cookbooks/ruby/templates/default/dot.irbrc.erb
@@ -10,8 +10,7 @@
   irb/completion
   irb/ext/save-history
   pp
-  ap
-  net-http-spy
+  awesome_print
 ].each do |path|
   begin
     require path
@@ -35,7 +34,7 @@ class Object
   def local_methods(obj = self)
     (obj.methods - obj.class.superclass.instance_methods).sort
   end
-  
+
   # print documentation
   #
   #   ri 'Array#pop'
@@ -156,7 +155,7 @@ module Where
           nil
         end
       end
-      methods.compact!      
+      methods.compact!
       methods
     end
 
@@ -194,7 +193,7 @@ if __FILE__ == $0
     def self.carmen
     end
   end
-  
+
   where_is(World, :carmen)
 end
 
