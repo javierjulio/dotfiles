@@ -2,18 +2,15 @@
 # Path settings
 # ========================================
 
-# for the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-if [ -d $HOME/.nvm ]; then
-  source $HOME/.nvm/nvm.sh
-  [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
-fi
-
 if [ -d $HOME/.pyenv ]; then
   export PYENV_ROOT="$HOME/.pyenv"
   export PATH="$PYENV_ROOT/bin:$PATH"
   eval "$(pyenv init -)"
+fi
+
+if [ -d $HOME/.nvm ]; then
+  source $HOME/.nvm/nvm.sh
+  [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
 fi
 
 if [ -d $HOME/.rbenv ]; then
@@ -24,9 +21,6 @@ fi
 if [ -d $HOME/.bats ]; then
   export PATH="$HOME/.bats/bin:$PATH"
 fi
-
-# recommended by Homebrew (brew doctor)
-export PATH="/usr/local/bin:$PATH"
 
 # dotfiles bin
 export PATH="$HOME/.bin:$PATH"
@@ -46,12 +40,4 @@ GREEN='\[\e[0;32m\]'
 END='\[\e[0m\]' # reset text to default color
 
 # customize Terminal prompt
-# http://osxdaily.com/2006/12/11/how-to-customize-your-terminal-prompt/
-# http://www.mactricksandtips.com/2008/10/customizing-the-mac-terminal-bash-prompt.html
-# http://sos.blog-city.com/mac_os_x__bash_customize_your_terminal_prompt_a_little_color.htm
-# For the git branch output: http://markdotto.com/2012/10/18/terminal-hotness/ (Very Buggy)
-# export PS1='\e[0:36m\W:\e[m \e[0:33m`git branch 2> /dev/null | grep -e ^* | sed -E s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`\e[m'
-# http://richardhulse.blogspot.com/2008/06/using-git.html
-# http://chakra-linux.org/wiki/index.php/Color_Bash_Prompt
-# http://stackoverflow.com/questions/5379986/why-doesnt-my-bash-prompt-update
 export PS1="${CYAN}\W:${END}${YELLOW}\$(__git_ps1)${END} "
