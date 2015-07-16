@@ -38,37 +38,37 @@ ghwd() {
     open "https://github.com/javierjulio"
     return
   fi
-  
+
   # https://github.com/zeke/ghwd
   # Figure out github repo base URL
   base_url=$(git config --get remote.origin.url)
   base_url=${base_url%\.git} # remove .git from end of string
-  
+
   # Fix git@github.com: URLs
   base_url=${base_url//git@github\.com:/https:\/\/github\.com\/}
-  
+
   # Fix git://github.com URLS
-  base_url=${base_url//git:\/\/github\.com/https:\/\/github\.com\/}  
-  
+  base_url=${base_url//git:\/\/github\.com/https:\/\/github\.com\/}
+
   # Find current directory relative to .git parent
   full_path=$(pwd)
   git_base_path=$(cd ./$(git rev-parse --show-cdup); pwd)
   relative_path=${full_path#$git_base_path} # remove leading git_base_path from working directory
-  
+
   # If filename argument is present, append it
   if [ $1 ]; then
     relative_path="$relative_path/$1"
   fi
-  
+
   # Figure out current git branch
   # git_where=$(command git symbolic-ref -q HEAD || command git name-rev --name-only --no-undefined --always HEAD) 2>/dev/null
   git_where=$(command git name-rev --name-only --no-undefined --always HEAD) 2>/dev/null
-  
+
   # Remove cruft from branchname
   branch=${git_where#refs\/heads\/}
-  
+
   url="$base_url/tree/$branch$relative_path"
-  
+
   open $url
 }
 
@@ -105,9 +105,9 @@ start() {
   if [ -n "$commanda" ]; then
     if [ -f ./config/boot.rb ]; then
       echo "Removing logs..."
-      bundle exec rake log:clear
+      bundle exec rake log:clear RAILS_ENV=development
     fi
-    
+
     echo -e "$cyan$executinglabel$reset $commanda"
     $commanda
   fi
