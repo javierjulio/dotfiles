@@ -30,8 +30,6 @@ export PATH="$HOME/.bin:$PATH"
 # Shell preferences
 # ========================================
 
-export EDITOR="atom"
-
 CYAN='\[\e[0;36m\]'
 BLUE='\[\e[0;34m\]'
 RED='\[\e[0;31m\]'
