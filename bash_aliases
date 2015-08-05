@@ -54,6 +54,8 @@ alias documents='cd ~/Documents'
 alias p='cd ~/Projects'
 alias projects='cd ~/Projects'
 alias dotfiles='cd ~/Projects/dotfiles'
+alias jj='cd ~/Projects/javierjulio'
+
 
 # ========================================
 # Ruby
@@ -74,9 +76,9 @@ alias fs='foreman start'
 # Rails
 # ========================================
 
-alias rs='ber log:clear && start'
+alias rs='bundle exec rake log:clear && start'
 alias berc='bundle exec rails console'
-alias berdm='bundle exec rake db:migrate'
+alias berdm='bundle exec rake db:migrate && be rake db:test:prepare'
 alias rl='tail -f log/development.log'
 
 
