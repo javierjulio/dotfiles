@@ -8,10 +8,29 @@ if [ -d $HOME/.pyenv ]; then
   eval "$(pyenv init -)"
 fi
 
-if [ -d $HOME/.nvm ]; then
-  source $HOME/.nvm/nvm.sh
+# Lazy load NVM to speed up shell start time.
+# https://gist.github.com/fl0w/07ce79bd44788f647deab307c94d6922
+lazynvm() {
+  unset -f nvm node npm
+  export NVM_DIR=~/.nvm
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
   [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
-fi
+}
+
+nvm() {
+  lazynvm
+  nvm $@
+}
+
+node() {
+  lazynvm
+  node $@
+}
+
+npm() {
+  lazynvm
+  npm $@
+}
 
 if [ -d $HOME/.rbenv ]; then
   export PATH="$HOME/.rbenv/bin:$PATH"
