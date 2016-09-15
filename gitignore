@@ -30,3 +30,5 @@ profile
 DerivedData
 .idea/
 *.hmap
+
+.vscode
