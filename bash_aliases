@@ -1,5 +1,5 @@
-alias reload='source ~/.bash_profile'
-alias r='source ~/.bash_profile'
+alias reload='source ~/.profile'
+alias r='source ~/.profile'
 alias c='clear'
 alias q='exit'
 alias s='start' # figures out how to start project server
