@@ -13,9 +13,16 @@ Icon
 .Spotlight-V100
 .Trashes
 
+# Editors
+.vscode
+
 # Xcode
-.DS_Store
-*/build/*
+
+## Build generated
+build/
+DerivedData/
+
+## Various settings
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -24,11 +31,9 @@ Icon
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
-xcuserdata
-profile
-*.moved-aside
-DerivedData
-.idea/
-*.hmap
+xcuserdata/
 
-.vscode
+## Other
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
