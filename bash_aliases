@@ -69,16 +69,15 @@ alias bopen='bundle open' # bundle open GEM_NAME
 alias ber='bundle exec rake'
 alias bert='bundle exec rake test'
 alias rt='bundle exec ruby -Itest'
-alias fs='foreman start'
 
 
 # ========================================
 # Rails
 # ========================================
 
-alias rs='bundle exec rake log:clear && start'
+alias rs='bundle exec rails log:clear && start'
 alias berc='bundle exec rails console'
-alias berdm='bundle exec rake db:migrate && be rake db:test:prepare'
+alias berdm='bundle exec rails db:migrate'
 alias rl='tail -f log/development.log'
 
 
