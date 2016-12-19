@@ -2,12 +2,6 @@
 # Path settings
 # ========================================
 
-if [ -d $HOME/.pyenv ]; then
-  export PYENV_ROOT="$HOME/.pyenv"
-  export PATH="$PYENV_ROOT/bin:$PATH"
-  eval "$(pyenv init -)"
-fi
-
 # Lazy load NVM to speed up shell start time.
 # https://gist.github.com/fl0w/07ce79bd44788f647deab307c94d6922
 lazynvm() {

@@ -24,11 +24,6 @@ dict() {
   open dict:///"$@"
 }
 
-# Create a new directory and enter it
-md() {
-  mkdir -p "$@" && cd "$@"
-}
-
 executable() {
   chmod +x $@
 }
@@ -61,7 +56,6 @@ ghwd() {
   fi
 
   # Figure out current git branch
-  # git_where=$(command git symbolic-ref -q HEAD || command git name-rev --name-only --no-undefined --always HEAD) 2>/dev/null
   git_where=$(command git name-rev --name-only --no-undefined --always HEAD) 2>/dev/null
 
   # Remove cruft from branchname

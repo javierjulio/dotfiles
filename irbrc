@@ -10,7 +10,6 @@
   irb/completion
   irb/ext/save-history
   pp
-  awesome_print
 ].each do |path|
   begin
     require path
